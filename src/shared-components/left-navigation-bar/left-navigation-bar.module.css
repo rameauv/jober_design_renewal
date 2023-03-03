@@ -42,6 +42,10 @@
     color: var(--app-color-white);;
 }
 
+.menuItem:global(::after) {
+    display: none;
+}
+
 .AdministratorModeButtonContainer {
     padding: 12px;
 }
