@@ -10,7 +10,7 @@ body {
     --app-color-gray-5: #8C8C8C;
     --app-color-gray-6: #595959;
 
-    --app-color-accent: var(--app-color-blue-1);
+    --app-color-selected: var(--app-color-blue-0);
     --app-color-text-primary: var(--app-color-gray-6);
     --app-color-text-secondary: var(--app-color-gray-4);
     --app-color-text-link: var(--app-color-blue-1);

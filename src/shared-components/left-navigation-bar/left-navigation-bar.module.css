@@ -38,7 +38,7 @@
 }
 
 .menuItem:global(.ant-menu-item-selected) {;
-    background-color: var(--app-color-accent) !important; /*TODO check for another solution*/
+    background-color: var(--app-color-selected) !important; /*TODO check for another solution*/
     color: var(--app-color-white);;
 }
 
