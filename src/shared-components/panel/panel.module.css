@@ -1,0 +1,6 @@
+.container {
+    --background-color: var(--app-color-white);
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: var(--background-color);
+}

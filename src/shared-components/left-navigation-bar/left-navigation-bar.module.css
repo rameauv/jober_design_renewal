@@ -1,0 +1,47 @@
+.container {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    color: var(--app-color-white);
+}
+
+.titleContainer {
+    padding-right: 16px;
+    padding-left: 20px;
+    padding-top: 12px;
+    padding-bottom: 16px;
+    border-bottom: solid 1px var(--app-color-divider);
+    margin-bottom: 20px;
+}
+
+.title {
+    color: var(--app-color-white);
+}
+
+.panel {
+    height: 100%;
+    flex-grow: 1;
+    --background-color: var(--app-color-panel-2);
+    display: flex;
+    flex-direction: column;
+}
+
+.menu {
+    background: transparent;
+    border: none;
+    flex-grow: 1;
+}
+
+.menuItem {
+    color: var(--app-color-white);
+    margin: 0 !important; /*TODO check for another solution*/
+}
+
+.menuItem:global(.ant-menu-item-selected) {;
+    background-color: var(--app-color-accent) !important; /*TODO check for another solution*/
+    color: var(--app-color-white);;
+}
+
+.AdministratorModeButtonContainer {
+    padding: 12px;
+}

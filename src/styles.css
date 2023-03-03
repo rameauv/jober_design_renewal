@@ -10,6 +10,7 @@ body {
     --app-color-gray-5: #8C8C8C;
     --app-color-gray-6: #595959;
 
+    --app-color-accent: var(--app-color-blue-1);
     --app-color-text-primary: var(--app-color-gray-6);
     --app-color-text-secondary: var(--app-color-gray-4);
     --app-color-text-link: var(--app-color-blue-1);
@@ -17,11 +18,45 @@ body {
     --app-color-panel-0: var(--app-color-white);
     --app-color-panel-1: var(--app-color-gray-1);
     --app-color-panel-2: var(--app-color-gray-6);
+    --app-color-divider: var(--app-color-gray-2);
 
     color: var(--app-color-text-primary);
     background-color: var(--app-color-background);
     font-family: sans-serif;
-    text-align: center;
+}
+
+h1,
+h2 {
+    font-weight: 700;
+}
+
+h1 {
+    font-size: 24px;
+    line-height: 32px;
+}
+
+h2 {
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.app-font-bold {
+    font-weight: 700;
+}
+
+.app-font-p1 {
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.app-font-p2 {
+    font-size: 14px;
+    line-height: 22px;
+}
+
+.app-font-p3 {
+    font-size: 12px;
+    line-height: 20px;
 }
 
 #root {
