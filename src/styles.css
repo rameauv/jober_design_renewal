@@ -1,4 +1,44 @@
+body {
+    --app-color-blue-0: #40A9FF;
+    --app-color-blue-1: #1890FF;
+    --app-color-white: #FFFFFF;
+    --app-color-gray-0: #FEFEFE;
+    --app-color-gray-1: #FAFAFA;
+    --app-color-gray-2: #E8E8E8;
+    --app-color-gray-3: #D9D9D9;
+    --app-color-gray-4: #BFBFBF;
+    --app-color-gray-5: #8C8C8C;
+    --app-color-gray-6: #595959;
+
+    --app-color-text-primary: var(--app-color-gray-6);
+    --app-color-text-secondary: var(--app-color-gray-4);
+    --app-color-text-link: var(--app-color-blue-1);
+    --app-color-background: var(--app-color-gray-2);
+    --app-color-panel-0: var(--app-color-white);
+    --app-color-panel-1: var(--app-color-gray-1);
+    --app-color-panel-2: var(--app-color-gray-6);
+
+    color: var(--app-color-text-primary);
+    background-color: var(--app-color-background);
+    font-family: sans-serif;
+    text-align: center;
+}
+
+#root {
+    min-height: 100%;
+}
+
 .App {
-  font-family: sans-serif;
-  text-align: center;
+    min-height: 100%;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    justify-content: space-between;
+    contain: layout size style;
+    overflow: hidden;
+    z-index: 0;
 }

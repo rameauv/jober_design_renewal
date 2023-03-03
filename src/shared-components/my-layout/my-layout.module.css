@@ -1,0 +1,18 @@
+.container {
+    display: flex;
+    min-height: 100%;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 20px;
+    padding-bottom: 32px;
+}
+
+
+.sideContainer {
+    width: 240px;
+    margin-right: 20px;
+}
+
+.centralContainer {
+    flex-grow: 1;
+}
