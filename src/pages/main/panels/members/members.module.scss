@@ -1,0 +1,23 @@
+.titleContainer {
+  justify-content: space-between;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 16px;
+  padding-right: 16px;
+  display: flex;
+}
+
+.searchInputContainer {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  width: 240px;
+}
+
+.title {
+  align-self: flex-end;
+}
+
+.mobileTableContainer {
+  background-color: var(--app-color-panel-0);
+  flex-grow: 1;
+}

@@ -5,8 +5,13 @@ import styles from "./left-navigation-bar.module.css"
 import {UserOutlined} from "@ant-design/icons";
 import {MyButton} from "../my-button/my-button";
 
-export function LeftNavigationBar() {
-  const [selectedMenuKeys, setSelectedMenuKeys] = useState(["0"]);
+export function LeftNavigationBar({items = [], onSelected, selection}) {
+  function handleSelection(key) {
+    if (!onSelected) {
+      return;
+    }
+    onSelected(key);
+  }
 
   return (
       <div className={styles.container}>
@@ -16,18 +21,20 @@ export function LeftNavigationBar() {
           </div>
           <Menu
               className={styles.menu}
-              selectedKeys={selectedMenuKeys}
-              onSelect={({selectedKeys}) => setSelectedMenuKeys(selectedKeys)}
+              selectedKeys={selection}
+              onSelect={({selectedKeys}) => handleSelection(selectedKeys)}
               mode="inline"
           >
-            <Menu.Item className={styles.menuItem} key="0"><span
-                className="app-font-p2 app-font-bold">구성원</span></Menu.Item>
-            <Menu.Item className={styles.menuItem} key="1"><span
-                className="app-font-p2 app-font-bold">문서함</span></Menu.Item>
-            <Menu.Item className={styles.menuItem} key="2"><span
-                className="app-font-p2 app-font-bold">회사 정보 관리</span></Menu.Item>
-            <Menu.Item className={styles.menuItem} key="3"><span
-                className="app-font-p2 app-font-bold">설정</span></Menu.Item>
+            {
+              items.map(item => (
+                  <Menu.Item
+                      className={styles.menuItem}
+                      key={item.key}
+                  >
+                    <span className="app-font-p2 app-font-bold">{item.label}</span>
+                  </Menu.Item>
+              ))
+            }
           </Menu>
           <div className={styles.AdministratorModeButtonContainer}>
             <MyButton/>

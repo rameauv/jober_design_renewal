@@ -2,7 +2,7 @@ import styles from './my-layout.module.css';
 import {MobileNavigationBar} from "../mobile-navigation-bar/mobile-navigation-bar";
 import {MyTable} from "../table/my-table";
 
-export function MyLayout({sideElement, centralElement}) {
+export function MyLayout({sideElement, mobileHeader, mobileContent, desktopContent}) {
   return (
       <>
         <div className={styles.container}>
@@ -11,13 +11,13 @@ export function MyLayout({sideElement, centralElement}) {
               {sideElement}
             </div>
             <div className={styles.centralContainer}>
-              {centralElement}
+              {desktopContent}
             </div>
           </div>
         </div>
         <div className={styles.mobileContainer}>
-          <MobileNavigationBar/>
-          {/*<MyTable/>*/}
+          {mobileHeader}
+          {mobileContent}
         </div>
       </>
   );

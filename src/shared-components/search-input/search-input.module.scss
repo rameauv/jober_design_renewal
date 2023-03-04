@@ -1,0 +1,26 @@
+@import "src/variables";
+
+.container {
+  :global {
+    .ant-input-group-addon {
+      display: none;
+    }
+    .ant-input-affix-wrapper {
+      border-radius: 4px !important;
+      border-color: var(--app-border-color);
+    }
+    input::placeholder {
+      color: var(--app-color-text-secondary);
+    }
+    input {
+      @include font-p2;
+    }
+  }
+}
+
+.searchIcon {
+  height: 12px;
+  width: 12px;
+  font-size: 12px;
+  color: var(--app-color-gray-3);
+}

@@ -1,0 +1,14 @@
+
+.table {
+  :global {
+    .ant-table {
+      background: transparent;
+    }
+    .ant-table-thead {
+      background: transparent;
+      & > tr > th {
+        background: transparent;
+      }
+    }
+  }
+}

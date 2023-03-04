@@ -19,6 +19,7 @@ body {
     --app-color-panel-1: var(--app-color-gray-1);
     --app-color-panel-2: var(--app-color-gray-6);
     --app-color-divider: var(--app-color-gray-2);
+    --app-border-color: var(--app-color-gray-3);
 
     color: var(--app-color-text-primary);
     background-color: var(--app-color-background);
@@ -28,6 +29,7 @@ body {
 h1,
 h2 {
     font-weight: 700;
+    margin: 0;
 }
 
 h1 {

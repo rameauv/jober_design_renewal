@@ -3,22 +3,15 @@ import {MyButton} from "../my-button/my-button";
 import {Button, Tabs} from "antd";
 import {useState} from "react";
 
-export function MobileNavigationBar() {
-  const items = [
-    {label: "구성원", key: "0"},
-    {label: "문서함", key: "1"},
-    {label: "회사정보관리", key: "2"},
-    {label: "설정", key: "3"},
-  ];
-  const [selectedMenuKey, setSelectedMenuKey] = useState("0");
-
+export function MobileNavigationBar({items = [], onSelected, selection = []}) {
   function handleSelection(key) {
-    setSelectedMenuKey(key);
+    if (!onSelected) {
+      return;
+    }
+    onSelected([key]);
   }
 
-  const onChange = (key: string) => {
-    console.log(key);
-  };
+  const massagedSelection = selection[0];
 
   return (
       <div>
@@ -29,7 +22,7 @@ export function MobileNavigationBar() {
           </div>
         </div>
         <div className={styles.navBar}>
-          <Tabs className={styles.tabs} activeKey={selectedMenuKey} onChange={key => handleSelection(key)}>
+          <Tabs className={styles.tabs} activeKey={massagedSelection} onChange={key => handleSelection(key)}>
             {items.map(item => (<Tabs.TabPane className={styles.tab} tab={item.label} key={item.key}/>))}
           </Tabs>
         </div>
