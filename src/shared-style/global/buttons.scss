@@ -1,0 +1,14 @@
+@import "../variables";
+
+.app-button {
+  &.ant-btn {
+    &.ant-btn-primary {
+      text-shadow: none;
+      padding-left: 16px;
+      padding-right: 16px;
+      border-radius: 4px;
+      box-shadow: none;
+      @include font-p2;
+    }
+  }
+}
