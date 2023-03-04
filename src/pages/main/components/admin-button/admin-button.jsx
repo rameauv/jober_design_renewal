@@ -1,8 +1,8 @@
-import styles from './my-button.module.css';
+import styles from './admin-button.module.css';
 import {Button} from "antd";
 import {UserOutlined} from "@ant-design/icons";
 
-export function MyButton() {
+export function AdminButton() {
   return (
       <>
         <Button

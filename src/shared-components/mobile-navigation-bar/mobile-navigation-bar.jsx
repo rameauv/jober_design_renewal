@@ -1,5 +1,5 @@
 import styles from "./mobile-navigation-bar.module.scss";
-import {MyButton} from "../my-button/my-button";
+import {AdminButton} from "../../pages/main/components/admin-button/admin-button";
 import {Button, Tabs} from "antd";
 import {useState} from "react";
 
@@ -18,7 +18,7 @@ export function MobileNavigationBar({items = [], onSelected, selection = []}) {
         <div className={styles.titleBar}>
           <h2 className={styles.title}>주식회사 자버</h2>
           <div>
-            <MyButton/>
+            <AdminButton/>
           </div>
         </div>
         <div className={styles.navBar}>

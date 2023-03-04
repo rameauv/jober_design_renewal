@@ -3,7 +3,7 @@ import React, {useState} from "react";
 import {Panel} from "../panel/panel";
 import styles from "./left-navigation-bar.module.css"
 import {UserOutlined} from "@ant-design/icons";
-import {MyButton} from "../my-button/my-button";
+import {AdminButton} from "../../pages/main/components/admin-button/admin-button";
 
 export function LeftNavigationBar({items = [], onSelected, selection}) {
   function handleSelection(key) {
@@ -37,7 +37,7 @@ export function LeftNavigationBar({items = [], onSelected, selection}) {
             }
           </Menu>
           <div className={styles.AdministratorModeButtonContainer}>
-            <MyButton/>
+            <AdminButton/>
           </div>
         </Panel>
       </div>

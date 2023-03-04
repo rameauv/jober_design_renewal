@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import {LeftNavigationBar} from "../../shared-components/left-navigation-bar/left-navigation-bar";
 import {MyLayout} from "../../shared-components/my-layout/my-layout";
-import {Members} from "./panels/members/members";
+import {Members} from "./components/panels/members/members";
 import {MobileNavigationBar} from "../../shared-components/mobile-navigation-bar/mobile-navigation-bar";
 
 const menuItems = [

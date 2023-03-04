@@ -1,10 +1,10 @@
 import {Button, Input} from "antd";
-import {MyTable} from "../../../../shared-components/table/my-table";
+import {MyTable} from "../../../../../shared-components/table/my-table";
 import React from "react";
-import {Panel} from "../../../../shared-components/panel/panel";
+import {Panel} from "../../../../../shared-components/panel/panel";
 import styles from "./members.module.scss";
-import {SearchInput} from "../../../../shared-components/search-input/search-input";
-import {EMPLOYEE_LIST_MOCK} from "../../../../constants";
+import {SearchInput} from "../../../../../shared-components/search-input/search-input";
+import {EMPLOYEE_LIST_MOCK} from "../../../../../constants";
 
 const employeeTableColumns = [
   {
