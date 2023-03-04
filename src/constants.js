@@ -1,11 +1,11 @@
 export const EMPLOYEE_LIST_MOCK = [
   {
     key: "0",
-    name: "Neo",
-    departure: "경영지원",
-    job: "기획, 운영",
-    phone: "010-1234-1234",
-    email: "neo@test.io",
+    name: "Neo ddddddddddddddddddddddddddd",
+    departure: "경영지원 dddddddddddddddddddddddd",
+    job: "기획, 운영 dddddddddddddddddddddddd",
+    phone: "010-1234-1234 dddddddddddddddddddddd",
+    email: "neo@test.io dddddddddddddddddddddddd",
     invited: true
   },
   {
@@ -43,40 +43,5 @@ export const EMPLOYEE_LIST_MOCK = [
     phone: "010-4300-66313",
     email: "aj@test.io",
     invited: true
-  }
-];
-
-export const EMPLOYEE_TABLE_COLUMNS = [
-  {
-    title: "이름",
-    dataIndex: "name",
-    key: "name",
-    render: (text) => <a>{text}</a>
-  },
-  {
-    title: "부서",
-    dataIndex: "departure",
-    key: "departure"
-  },
-  {
-    title: "담당업무",
-    dataIndex: "job",
-    key: "job"
-  },
-  {
-    title: "전화번호",
-    dataIndex: "phone",
-    key: "phone"
-  },
-  {
-    title: "회사이메일",
-    dataIndex: "email",
-    key: "email"
-  },
-  {
-    title: "정보 입력 요청",
-    dataIndex: "invited",
-    key: "invited",
-    render: (invited) => (invited ? <a>정보 입력 요청</a> : "입력 완료")
   }
 ];

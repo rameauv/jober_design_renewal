@@ -11,32 +11,50 @@ const employeeTableColumns = [
     title: "이름",
     dataIndex: "name",
     key: "name",
+    ellipsis: {
+      showTitle: false,
+    },
     render: (text) => <a>{text}</a>
   },
   {
     title: "부서",
     dataIndex: "departure",
-    key: "departure"
+    key: "departure",
+    ellipsis: {
+      showTitle: false,
+    }
   },
   {
     title: "담당업무",
     dataIndex: "job",
-    key: "job"
+    key: "job",
+    ellipsis: {
+      showTitle: false,
+    }
   },
   {
     title: "전화번호",
     dataIndex: "phone",
-    key: "phone"
+    key: "phone",
+    ellipsis: {
+      showTitle: false,
+    }
   },
   {
     title: "회사이메일",
     dataIndex: "email",
-    key: "email"
+    key: "email",
+    ellipsis: {
+      showTitle: false,
+    }
   },
   {
     title: "정보 입력 요청",
     dataIndex: "invited",
     key: "invited",
+    ellipsis: {
+      showTitle: false,
+    },
     render: (invited) => (
         invited
             ? <a className={styles.inviteTableCellLink}>정보 입력 요청</a>
@@ -44,6 +62,16 @@ const employeeTableColumns = [
     )
   }
 ];
+
+const mobileColumnKeysSet = new Set(
+    [
+      "name",
+      "departure",
+      "phone"
+    ]
+);
+
+const mobileEmployeeTableColumns = employeeTableColumns.filter(column => mobileColumnKeysSet.has(column.key));
 
 export function Members({isDesktopMode}) {
   if (isDesktopMode) {
@@ -67,7 +95,7 @@ export function Members({isDesktopMode}) {
       <div className={styles.mobileTableContainer}>
         <MyTable
             isDesktopMode={false}
-            columns={employeeTableColumns}
+            columns={mobileEmployeeTableColumns}
             dataSource={EMPLOYEE_LIST_MOCK}
         />
       </div>

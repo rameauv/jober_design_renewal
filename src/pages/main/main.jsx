@@ -4,6 +4,13 @@ import {MyLayout} from "../../shared-components/my-layout/my-layout";
 import {Members} from "./panels/members/members";
 import {MobileNavigationBar} from "../../shared-components/mobile-navigation-bar/mobile-navigation-bar";
 
+const menuItems = [
+  {label: "구성원", key: "0"},
+  {label: "문서함", key: "1"},
+  {label: "회사정보관리", key: "2"},
+  {label: "설정", key: "3"},
+];
+
 const Main = () => {
   const [selectedMenuKeys, setSelectedMenuKeys] = useState(["0"]);
 
@@ -26,18 +33,20 @@ const Main = () => {
     setSelectedMenuKeys(keys);
   }
 
-  const menuItems = [
-    {label: "구성원", key: "0"},
-    {label: "문서함", key: "1"},
-    {label: "회사정보관리", key: "2"},
-    {label: "설정", key: "3"},
-  ];
   const leftNavBar = (
-      <LeftNavigationBar items={menuItems} selection={selectedMenuKeys}
-                         onSelected={keys => handleMenuSelction(keys)}/>);
+      <LeftNavigationBar
+          items={menuItems}
+          selection={selectedMenuKeys}
+          onSelected={keys => handleMenuSelction(keys)}
+      />
+  );
   const mobileHeader = (
-      <MobileNavigationBar items={menuItems} selection={selectedMenuKeys}
-                           onSelected={keys => handleMenuSelction(keys)}/>);
+      <MobileNavigationBar
+          items={menuItems}
+          selection={selectedMenuKeys}
+          onSelected={keys => handleMenuSelction(keys)}
+      />
+  );
 
   return (
       <MyLayout
