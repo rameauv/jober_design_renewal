@@ -21,3 +21,11 @@
   background-color: var(--app-color-panel-0);
   flex-grow: 1;
 }
+
+.inviteTableCellLink {
+  text-decoration-line: underline;
+}
+
+.invitedTableCell {
+  color: var(--app-color-text-secondary);
+}

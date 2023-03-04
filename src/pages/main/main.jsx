@@ -1,11 +1,6 @@
 import React, {useState} from "react";
-import {Menu, Table, Input, Card, Layout, Tabs} from "antd";
-import {EMPLOYEE_LIST_MOCK, EMPLOYEE_TABLE_COLUMNS} from "../../constants";
 import {LeftNavigationBar} from "../../shared-components/left-navigation-bar/left-navigation-bar";
-import {MyTable} from "../../shared-components/table/my-table";
 import {MyLayout} from "../../shared-components/my-layout/my-layout";
-import {Panel} from "../../shared-components/panel/panel";
-import {AndroidOutlined, AppleOutlined} from '@ant-design/icons';
 import {Members} from "./panels/members/members";
 import {MobileNavigationBar} from "../../shared-components/mobile-navigation-bar/mobile-navigation-bar";
 
@@ -38,9 +33,11 @@ const Main = () => {
     {label: "설정", key: "3"},
   ];
   const leftNavBar = (
-      <LeftNavigationBar items={menuItems} selection={selectedMenuKeys} onSelected={keys => handleMenuSelction(keys)}/>);
+      <LeftNavigationBar items={menuItems} selection={selectedMenuKeys}
+                         onSelected={keys => handleMenuSelction(keys)}/>);
   const mobileHeader = (
-      <MobileNavigationBar items={menuItems} selection={selectedMenuKeys} onSelected={keys => handleMenuSelction(keys)}/>);
+      <MobileNavigationBar items={menuItems} selection={selectedMenuKeys}
+                           onSelected={keys => handleMenuSelction(keys)}/>);
 
   return (
       <MyLayout

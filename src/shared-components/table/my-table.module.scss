@@ -1,14 +1,27 @@
+@import "src/variables";
 
-.table {
-  :global {
-    .ant-table {
-      background: transparent;
+.container :global {
+  .desktop-mode {
+    .ant-table-thead > tr > th {
+      @include font-p2;
     }
-    .ant-table-thead {
+
+    .ant-table {
+      @include font-p2;
+    }
+  }
+
+  .ant-table {
+    background: transparent;
+    @include font-p1;
+  }
+
+  .ant-table-thead {
+    background: transparent;
+
+    & > tr > th {
       background: transparent;
-      & > tr > th {
-        background: transparent;
-      }
+      @include font-p3;
     }
   }
 }
