@@ -50,7 +50,8 @@ export const EMPLOYEE_TABLE_COLUMNS = [
   {
     title: "이름",
     dataIndex: "name",
-    key: "name"
+    key: "name",
+    render: (text) => <a>{text}</a>
   },
   {
     title: "부서",
@@ -76,6 +77,6 @@ export const EMPLOYEE_TABLE_COLUMNS = [
     title: "정보 입력 요청",
     dataIndex: "invited",
     key: "invited",
-    render: (invited) => (invited ? "정보 입력 요청" : "입력 완료")
+    render: (invited) => (invited ? <a>정보 입력 요청</a> : "입력 완료")
   }
 ];

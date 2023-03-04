@@ -43,7 +43,7 @@
 }
 
 .menuItem:global(::after) {
-    display: none;
+    /*display: none;*/
 }
 
 .AdministratorModeButtonContainer {

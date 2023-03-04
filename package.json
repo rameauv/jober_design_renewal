@@ -12,7 +12,8 @@
   },
   "devDependencies": {
     "@ant-design/icons": "^5.0.1",
-    "@babel/runtime": "7.13.8"
+    "@babel/runtime": "7.13.8",
+    "sass": "^1.58.3"
   },
   "scripts": {
     "start": "react-scripts start",

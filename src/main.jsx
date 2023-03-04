@@ -1,11 +1,12 @@
 import React, {useState} from "react";
-import {Menu, Table, Input, Card, Layout} from "antd";
+import {Menu, Table, Input, Card, Layout, Tabs} from "antd";
 import {EMPLOYEE_LIST_MOCK, EMPLOYEE_TABLE_COLUMNS} from "./constants";
 import {LeftNavigationBar} from "./shared-components/left-navigation-bar/left-navigation-bar";
 import {MyTable} from "./shared-components/table/my-table";
 import {MyLayout} from "./shared-components/my-layout/my-layout";
 import styles from "./index.module.css"
 import {Panel} from "./shared-components/panel/panel";
+import { AndroidOutlined, AppleOutlined } from '@ant-design/icons';
 
 const Main = () => {
   const [selectedMenuKeys, setSelectedMenuKeys] = useState(["0"]);
@@ -21,15 +22,13 @@ const Main = () => {
     switch (menuKey) {
       case "0":
         content = (
-            <Card bordered={false}>
-              <div style={{textAlign: "left"}}>
-                <div style={{display: "flex", justifyContent: "space-between"}}>
-                  <h2>구성원</h2>
-                  <Input.Search style={{width: "200px"}}/>
-                </div>
-                <MyTable/>
+            <div style={{textAlign: "left"}}>
+              <div style={{display: "flex", justifyContent: "space-between"}}>
+                <h2>구성원</h2>
+                <Input.Search style={{width: "200px"}}/>
               </div>
-            </Card>
+              <MyTable/>
+            </div>
         );
         break;
       case "1":
@@ -46,12 +45,12 @@ const Main = () => {
   };
 
   return (
-      // <div className={styles.container}>
+      <div className={styles.container}>
       <MyLayout
           sideElement={leftNavBar}
           centralElement={<Panel>{getContent(selectedMenuKeys[0])}</Panel>}
       />
-      // </div>
+      </div>
   );
 };
 

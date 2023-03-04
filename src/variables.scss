@@ -1,0 +1,9 @@
+@mixin font-bold {
+  font-weight: 700;
+}
+
+@mixin font-p2 {
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 400;
+}

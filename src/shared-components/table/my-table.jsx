@@ -6,6 +6,7 @@ export function MyTable() {
   return (
       <>
         <Table
+
             dataSource={EMPLOYEE_LIST_MOCK}
             columns={EMPLOYEE_TABLE_COLUMNS}
             pagination={false}
